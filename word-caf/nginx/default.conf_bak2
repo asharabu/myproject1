@@ -1,9 +1,12 @@
 server {
-    listen       80;
-    server_name  localhost;
-
+    listen       443 ssl;
+    server_name  qnocs.com;
+    ssl_certificate         /opt/dhit.crt;
+    ssl_certificate_key     /opt/dhit.key;
+    
     #charset koi8-r;
     #access_log  /var/log/nginx/host.access.log  main;
+    error_log /var/log/nginx/error_log;
 
     location / {
         root   /usr/share/nginx/html;
